@@ -14,10 +14,8 @@ build published to the public [Docker Hub Registry](https://registry.hub.docker.
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated
-build](https://hub.docker.com/r/twopackas/redmine-centos-ansible/) from
-public [Docker Hub](https://hub.docker.com/):  
-   `docker pull twopackas/redmine-centos-ansible`
+2. Download [automated build](https://hub.docker.com/r/twopackas/redmine-centos-ansible/) from public [Docker Hub](https://hub.docker.com/):  
+    `docker pull twopackas/redmine-centos-ansible`
 
 ### Build
 
@@ -37,5 +35,6 @@ redmine-centos-ansible /sbin/init
 $ docker exec -ti redmine-centos-ansible /bin/bash
 # ansible-playbook -i hosts site.yml
 ```
+
 
 After that, access to http://your-server:8080/redmine
