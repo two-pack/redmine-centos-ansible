@@ -1,12 +1,8 @@
 ## redmine-centos-ansible Dockerfile
 
 
-This repository contains **Dockerfile** of running for [Redmine
-AnsiblePlaybook Unofficial Cooking
-Edition](https://github.com/y503unavailable/redmine-centos-ansible) for
-[Docker](https://www.docker.com/)'s automated
-build published to the
-public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains **Dockerfile** of running for [Redmine AnsiblePlaybook Unofficial Cooking Edition](https://github.com/y503unavailable/redmine-centos-ansible) for [Docker](https://www.docker.com/)'s automated
+build published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
 
 
 ### Base Docker Image
