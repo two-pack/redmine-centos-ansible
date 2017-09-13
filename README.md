@@ -140,7 +140,7 @@ redmine_default_theme: redmine_flat
 ```
 $ git clone https://github.com/y503unavailable/redmine-centos-ansible.git
 $ cd redmine-centos-ansible
-$ docker build -t redmine-centos-ansible .
+$ docker build -t redmine-centos-ansible docker
 ```
 
 下記のコマンドでビルドしたDockerコンテナでPlaybookを実行できます。

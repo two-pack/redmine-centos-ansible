@@ -24,7 +24,7 @@ Alternatively, you can build an image from Dockerfile:
 ```
 $ git clone https://github.com/y503unavailable/redmine-centos-ansible.git
 $ cd redmine-centos-ansible
-$ docker build -t redmine-centos-ansible docker/Dockerfile
+$ docker build -t redmine-centos-ansible docker
 ```
 
 ### Usage

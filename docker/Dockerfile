@@ -2,7 +2,8 @@ FROM centos:7
 
 MAINTAINER Tatsuya Saito <twopackas@gmail.com>
 
-RUN yum install -y epel-release && \
+RUN yum -y update && \
+    yum install -y epel-release && \
     yum-config-manager --enable epel
 
 RUN rm -f /etc/rpm/macros.image-language-conf && \
