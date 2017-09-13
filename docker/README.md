@@ -30,8 +30,7 @@ $ docker build -t redmine-centos-ansible docker/Dockerfile
 ### Usage
 
 ```
-$ docker run --privileged --name redmine-centos-ansible -d -p 8080:80
-redmine-centos-ansible /sbin/init
+$ docker run --privileged --name redmine-centos-ansible -d -p 8080:80 twopackas/redmine-centos-ansible /sbin/init
 $ docker exec -ti redmine-centos-ansible /bin/bash
 # ansible-playbook -i hosts site.yml
 ```
