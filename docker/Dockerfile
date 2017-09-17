@@ -57,8 +57,3 @@ RUN echo 'RackBaseURI /redmine' >> /etc/httpd/conf.d/redmine.conf
 
 RUN ln -s /var/lib/redmine/public /var/www/html/redmine
 RUN httpd -k restart
-
-WORKDIR /tmp
-RUN git clone -b 3.4-unofficialcooking https://github.com/y503unavailable/redmine-centos-ansible.git
-
-WORKDIR /tmp/redmine-centos-ansible
