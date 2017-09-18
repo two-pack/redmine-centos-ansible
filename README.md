@@ -72,6 +72,11 @@ admin初期パスワード  unofficial-cracking
 
 インストール直後の CentOS 7 に root でログインし以下の操作を行ってください。
 
+### パッケージの更新
+
+```
+yum -y update
+```
 
 ### Ansibleとgitのインストール
 
@@ -85,6 +90,8 @@ yum install -y ansible git
 ```
 git clone -b 3.4-unofficialcooking https://github.com/y503unavailable/redmine-centos-ansible.git
 ```
+
+初期設定を変更する場合は、この時点で行ってください。
 
 ### playbook実行
 
@@ -136,14 +143,21 @@ redmine_default_theme: redmine_flat
 
 ---
 
-### Dockerを使用したPlaybookの実行
+## Dockerを使用したPlaybookの実行
 
-CentOSの場合、下記手順でdockerの最新版をインストールしてください、（CE 17以降）
+### Docker最新版のインストール
+
+CentOSの場合、下記手順でdockerの最新版をインストールし、起動してください、（Docker CE 17以降）
 
 CentOSのパッケージから導入すると、旧バージョンがインストールされ、正常に動作しない場合があります。
 ```
 curl -sSL https://get.docker.com/ | sh
+
+systemctl enable docker
+systemctl start  docker
 ```
+
+### Dockerコンテナのビルド
 
 下記のコマンドでPlaybookを実行できるDockerコンテナのビルドができます。
 ```
@@ -151,6 +165,8 @@ $ git clone https://github.com/y503unavailable/redmine-centos-ansible.git
 $ cd redmine-centos-ansible
 $ docker build -t redmine-centos-ansible docker
 ```
+
+### Dockerコンテナの起動とPlaybook実行
 
 下記のコマンドでビルドしたDockerコンテナでPlaybookを実行できます。
 ```
@@ -179,7 +195,7 @@ y503unavailable （Redmine.Tokyoスタッフ）
 
 [Redmine.tokyo unofficial cooking](https://redmine.tokyo/projects/unofficialcooking/)   
 
-Docker対応は  Tatsuya Saito <twopackas@gmail.com> によります。
+Docker対応は  Tatsuya Saito <twopackas@gmail.com> さんによります。
 
 ## 本プレイブックについて
 
